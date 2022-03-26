@@ -27,7 +27,7 @@ THEN the saved events persist
 # Quiz
 
 ## Purpose
-As a developer, I want to create a quiz where users can quiz themselves with a timer that depreciates in time when selecting a wrong answer and are provided a highscore that they can see afterwards.
+As a developer, I want to create a scheduler where users can quiz themselves with a timer that depreciates in time when selecting a wrong answer and are provided a highscore that they can see afterwards.
 
 ## Built With
 * HTML
