@@ -41,13 +41,13 @@ function taskColor() {
             document.getElementById('task' + timeArrays[i]).style.backgroundColor='#77dd77'
             document.getElementById('task' + timeArrays[i]).style.color='white'
         }
-        else if (time.diff(timeArrays2[i],'hours') == 1 && time >= timeArrays2[i]) {
+        else if (time - timeArrays2[i] == 1) {
             document.getElementById('task' + timeArrays[i]).style.backgroundColor='#ff6961'
             document.getElementById('task' + timeArrays[i]).style.color='white'
         }
     };
 };
 
-taskColor();
 setDate();
 keepTask();
+taskColor();
