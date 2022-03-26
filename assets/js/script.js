@@ -3,12 +3,30 @@
 // time of day is constant, so when task is past time turns red
 // able to select and add
 // save button save to local storage
-
-var taskFormEl = $('#task-form');
-var taskListEl = $('#task-list');
+var CurrentDate = document.getElementById('currentDay');
 
 // CURRENT DATE FUNCTION
+function setDate() {
+    
+    const date = new Date();
+    const n = date.toDateString();
 
+    CurrentDate.textContent = 'Current date: ' + n;
+};
+
+// CURRENT TIME FUNCTION
+var span = document.getElementById('span');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
+
+//   console.log(("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2));
+}
+
+setInterval(time, 1000);
 
 // ADD TASK FUNCTION
 // function addTask(event) {
@@ -37,9 +55,6 @@ var taskListEl = $('#task-list');
 //     // clear the form input element
 //     $('input[name="shopping-input"]').val('');
 // }
-
-// TIMEBLOCK TIME FUNCTION (CHECK)
-
 
 // SAVE BUTTON FUNCTION
 var saveTasks = function() {
@@ -83,4 +98,6 @@ var saveTasks = function() {
 //     textInput.trigger("focus");
 //   });
 
-shoppingFormEl.on('submit', handleFormSubmit);
+// shoppingFormEl.on('submit', handleFormSubmit);
+
+setDate();
