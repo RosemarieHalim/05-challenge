@@ -1,6 +1,6 @@
 // NOTES
-// time of day is constant, so when task is past time turns red
 var CurrentDate = document.getElementById('currentDay');
+
 
 // CURRENT DATE FUNCTION
 function setDate() {
@@ -10,13 +10,6 @@ function setDate() {
 
     CurrentDate.textContent = 'Current date: ' + n;
 };
-
-// CURRENT TIME FUNCTION
-function time() {
-    moment().format('h:mm:ss a');
-};
-
-setInterval(time, 1000);
 
 // ADD TASK FUNCTION
 function addTask(timeKey) {
@@ -34,6 +27,27 @@ function keepTask() {
     };
 };
 
+// CHANGE COLOR OF TASK AS TIME GOES BY
+function taskColor() {
+    const d = new Date();
+    var time = d.getHours();
 
+    var timeArrays = ['9', '10', '11', '12', '1', '2', '3', '4', '5'];
+    var timeArrays2 = ['9', '10', '11', '12', '13', '14', '15', '16', '17'];
+
+    for(let i = 0; i < timeArrays.length; i++) {
+        if (time <= timeArrays2[i])
+        {
+            document.getElementById('task' + timeArrays[i]).style.backgroundColor='#77dd77'
+            document.getElementById('task' + timeArrays[i]).style.color='white'
+        }
+        else if (time.diff(timeArrays2[i],'hours') == 1 && time >= timeArrays2[i]) {
+            document.getElementById('task' + timeArrays[i]).style.backgroundColor='#ff6961'
+            document.getElementById('task' + timeArrays[i]).style.color='white'
+        }
+    };
+};
+
+taskColor();
 setDate();
 keepTask();

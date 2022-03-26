@@ -27,7 +27,7 @@ THEN the saved events persist
 # Quiz
 
 ## Purpose
-As a developer, I want to create a scheduler where users can quiz themselves with a timer that depreciates in time when selecting a wrong answer and are provided a highscore that they can see afterwards.
+As a developer, I want to create a scheduler where users can schedule their work day themselves and schedule will track when a task is in the past, present, or future.
 
 ## Built With
 * HTML
@@ -46,8 +46,8 @@ https://rosemariehalim.github.io/05-challenge/
 * planned out code
 * linked css and js to HTML file
 * created develop branch
-* created base quiz function
-* added the functions for scores and timer
-* created main page and highscore page functions and updated html for pages
+* created base schedule function
+* added the functions for date and time
+* created core add task and save to local storage functions
 * tested and fixed broken code
 * merged develop branch into main and pushed to GitHub
